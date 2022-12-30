@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+ <bean id="address" class="com.accenture.Address">
+  <constructor-arg name="location" value="Condominium - 25 Sims Avenue #13-9087, Singapore 25000"></constructor-arg>
+ </bean>
+  <bean id="email" class="com.accenture.Email">
+  <constructor-arg name="email" value="ricky34@gmail.com"></constructor-arg>
+ </bean>
+ <bean id="owner" class="com.accenture.Owner">
+  <property name="name" value="Ricky" />
+  <property name="contact" value="90876789" />
+  <property name="email" ref="email" />
+  <property name="address" ref="address" />
+ </bean>
+</beans>
